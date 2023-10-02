@@ -100,9 +100,10 @@ article .img_bun::after {
   content: "公文式教育が提供する価値を、より高めていくための取り組みとは何か？";
   display: block;
   color: #fff;
+  text-align: left;
   font-size: 14px;
-  width: 600px;
-  padding: 20px 0;
+  width: 90%;
+  padding: 20px;
   background-color: rgba(0, 0, 0, 0.8);
   bottom: 20px;
   left: 20px;
@@ -115,10 +116,10 @@ article .img_bun2::after {
   content: "今後も提供し続けていくべき、公文式教育の普遍的価値とは何か？";
   display: block;
   color: #fff;
+  text-align: left;
   font-size: 14px;
-
-  width: 600px;
-  padding: 20px 0;
+  width: 90%;
+  padding: 20px;
   background-color: rgba(0, 0, 0, 0.8);
   bottom: 20px;
   left: 20px;
@@ -140,3 +141,73 @@ article ul a {
 }
 
 /* footer */
+
+footer {
+  padding: 100px 0;
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+footer ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+footer ul li:nth-child(1)::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 370px;
+  height: 2px;
+  background-color: #fff;
+  margin: 20px auto 0 -50px;
+}
+footer ul li:nth-child(2)::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 370px;
+  height: 2px;
+  background-color: #fff;
+  margin: 20px auto 0 -50px;
+}
+
+.footer_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 50px;
+}
+
+footer small {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+@media (min-width: 740px) {
+  /* main_photo */
+  .main_photo {
+    background: url(./images/bg_main.png) center center/cover;
+    margin: 0;
+    width: initial;
+  }
+  .photo_box {
+    margin-left: 150px;
+  }
+  /* diss */
+  .DISCUSSION {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 60px;
+  }
+  .DISCUSSION h2 {
+    width: 100%;
+  }
+  .DISCUSSION article {
+    width: 45%;
+  }
+}
