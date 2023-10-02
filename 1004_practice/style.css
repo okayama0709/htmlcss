@@ -191,7 +191,8 @@ footer small {
   /* main_photo */
   .main_photo {
     background: url(./images/bg_main.png) center center/cover;
-    margin: 0;
+    max-width: initial;
+    margin: initial;
     width: initial;
   }
   .photo_box {
