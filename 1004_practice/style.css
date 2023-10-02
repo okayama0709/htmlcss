@@ -3,4 +3,25 @@
 body {
   font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN",
     "Yu Mincho", "MS PMincho", serif;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+}
+
+.inner {
+  max-width: 960px;
+  width: 89.7%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
