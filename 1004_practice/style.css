@@ -9,8 +9,8 @@ body {
 }
 
 .inner {
-  max-width: 960px;
-  width: 89.7%;
+  max-width: 1260px;
+  width: 92%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -25,3 +25,118 @@ ul {
   padding: 0;
   list-style: none;
 }
+
+/* header */
+
+header h1 {
+  text-align: center;
+  padding: 40px 0;
+}
+
+/* main */
+/* mainphoto */
+.main_photo {
+  background: url(./images/bg_main.png) center right -300px;
+  background-size: cover;
+  padding: 240px 0 80px 0;
+}
+
+.photo_box {
+  background-color: #fff;
+  width: 343px;
+  padding: 40px 40px;
+}
+
+.photo_box dt {
+  font-size: 18px;
+}
+
+.photo_box dd {
+  font-size: 36px;
+  margin-top: 30px;
+}
+
+/* DISCUSSION */
+.DISCUSSION {
+  text-align: center;
+}
+.DISCUSSION h2 {
+  font-size: 36px;
+  line-height: 1.2;
+  margin-top: 155px;
+  margin-bottom: 50px;
+}
+.DISCUSSION h2::before {
+  content: "KUMONが向き合うもの";
+  display: block;
+  width: 194px;
+  font-weight: normal;
+  font-size: 14px;
+  background-color: #72c9f3;
+  padding: 8px 0;
+  margin: 0 auto 25px auto;
+  color: #fff;
+}
+.DISCUSSION h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 2px;
+  background-color: #1e1e1e;
+  margin: 20px auto 0 auto;
+}
+
+/* discussion article */
+.DISCUSSION article {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #dddddd;
+  margin-bottom: 50px;
+}
+.img_bun {
+  position: relative;
+}
+article .img_bun::after {
+  position: absolute;
+  content: "公文式教育が提供する価値を、より高めていくための取り組みとは何か？";
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  width: 600px;
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  bottom: 20px;
+  left: 20px;
+}
+.img_bun2 {
+  position: relative;
+}
+article .img_bun2::after {
+  position: absolute;
+  content: "今後も提供し続けていくべき、公文式教育の普遍的価値とは何か？";
+  display: block;
+  color: #fff;
+  font-size: 14px;
+
+  width: 600px;
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  bottom: 20px;
+  left: 20px;
+}
+
+article ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  column-gap: 10px;
+}
+
+article ul a {
+  padding: 6px 12px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  color: #1e1e1e;
+  text-decoration: none;
+}
+
+/* footer */
