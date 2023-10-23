@@ -22,3 +22,69 @@ li {
 a {
   text-decoration: none;
 }
+
+/* レイアウト
+---------------------------------*/
+/* 繰り返し使用されるレイアウトルールについては、クラスセレクタを使用し、接頭辞として「layout-」もしくは「l-」を付ける */
+.l-inner {
+  min-width: 1200px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.l-bg-blue {
+  background-color: #123d88;
+  color: #fff;
+}
+
+.l-py-8 {
+  padding: 32px 0;
+}
+
+/* unit */
+.unit-title {
+  color: #262934;
+  font-size: 36px;
+  line-height: 1.3;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.unit-subtitle {
+  margin-bottom: 20px;
+  color: #256be6;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+}
+/* card */
+.card-title {
+  color: #2f2f35;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin: 40px 0 20px;
+}
+.l-col-2 {
+  width: 46%;
+}
+.l-col-3 {
+  width: 30%;
+}
+
+.l-flex {
+}
+
+/* 大枠を構成する要素にも同様に接頭辞を付ける */
+.l-header {
+}
+
+.l-main {
+}
+
+.l-footer {
+}
+/* テキスト */
+.l-text-right {
+  text-align: right;
+}

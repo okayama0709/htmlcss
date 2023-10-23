@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+body {
+  font-family: Helvetica, sans-serif;
+  color: #6c6c6f;
+  font-size: 16px;
+  line-height: (28/16);
+}
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.l-inner {
+  min-width: 1200px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  font-size: 36px;
+  color: #2f2f35;
+  font-weight: bold;
+}
+
+// widht
+.l-w-3 {
+  width: 30%;
+}
+// padding
+.l-pb-3 {
+  padding-bottom: 30px;
+}
+.l-pb-4 {
+  padding-bottom: 40px;
+}
+.l-pd-6 {
+  padding: 30px 0;
+}
+.l-pd-8 {
+  padding: 80px 0;
+}
+
+// margin
+.l-mb-3 {
+  margin-bottom: 30px;
+}
+.l-mb-4 {
+  margin-bottom: 40px;
+}
+
+.l-mb-8 {
+  margin-bottom: 80px;
+}
+// color
+
+.l-bg-blue {
+  background-color: #123d88;
+  color: #fff;
+}
+
+// text
+.l-text-center {
+  text-align: center;
+}
+.l-text-right {
+  text-align: right;
+}
+
+// flex
+.l-flex {
+  display: flex;
+}
+
+.l-just {
+  justify-content: space-between;
+}
+// img position
+.l-imgp-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// header
+//
+//
+//
+//
+//
+//
+
+// main
+// //
+//
+//
+//
+//
+//
+//
+// card
+
+.card-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2f2f35;
+  margin-bottom: 20px;
+}
