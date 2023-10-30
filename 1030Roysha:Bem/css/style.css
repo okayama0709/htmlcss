@@ -1,1 +1,24 @@
 @charset "utf-8";
+
+/* ベース */
+/* ーーーーーーーーーーーーーーーーーー */
+body {
+  color: #6c6c6f;
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+
+img {
+  min-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
