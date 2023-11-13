@@ -1,0 +1,79 @@
+$bg-blue: #00ff00;
+$bg-red: #ff0000;
+
+@mixin inner($w: 90%, $mw: 1200px) {
+  max-width: $w;
+  width: $mw;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin flex($j: space-between, $a: center) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: $a;
+  justify-content: $j;
+}
+
+@mixin py($y: 80px) {
+  padding-top: $y;
+  padding-bottom: $y;
+}
+
+body {
+  line-height: (28/16);
+  letter-spacing: (50/1000) * 100%;
+}
+
+.card {
+  .btn {
+    margin-top: 40px;
+  }
+}
+.header {
+  background-color: #00ff00;
+
+  &__inner {
+    @include inner();
+  }
+}
+.footer {
+  background-color: $bg-blue;
+
+  &__inner {
+    @include inner();
+  }
+}
+
+// index.html
+// --------------------------
+.features {
+  @include py();
+
+  &__inner {
+    @include inner();
+    @include flex();
+  }
+
+  &__info {
+    width: (552/1200) * 100%;
+  }
+  &__list {
+    width: (552/1200 * 100%);
+    margin-bottom: -70px;
+    @include flex();
+  }
+  &__item {
+    width: (552/1200) * 100%;
+    margin-bottom: 70px;
+  }
+}
+
+.wedo {
+  &__inner {
+    @include inner();
+  }
+  &__info {
+    @include inner(100%, 700px);
+  }
+}
