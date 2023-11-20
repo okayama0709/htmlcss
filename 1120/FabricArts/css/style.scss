@@ -1,0 +1,242 @@
+@charset "utf-8";
+
+// color
+// ------///-----/-----/
+$text: #000000;
+$copy: #898989;
+$sub-title: #e40065;
+$project-bg: #fdf8eb;
+
+// ネスト
+// ------------//------------///
+@mixin inner($w: 90%) {
+  width: $w;
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin flex($a: center, $j: spase-between) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: $a;
+  justify-content: $j;
+}
+
+@mixin name() {
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  background-color: $sub-title;
+  font-size: 12px;
+  padding: 6px 11px;
+  border-radius: 20px;
+  margin: 30px 0;
+}
+@mixin projects_img($img: url(../images/bg_project01.jpg)) {
+  background-image: $img;
+  padding: 150px 0 150px 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+// 全般//
+//---------------//------------//-----
+body {
+  font-size: 14px;
+  line-height: (24/14);
+  letter-spacing: (50/1000) * 100%;
+  font-family: "Helvetica", "Helvetica Neue", "Yu Gothic", "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+img {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: bottom;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+
+// header
+// --------------------------------//--------//
+// ----------//------------//-----------///----
+.header {
+  margin: 70px 0 100px;
+  &__inner {
+    @include inner();
+    @include flex();
+  }
+  &__logo {
+    margin-right: auto;
+  }
+}
+.navi {
+  @include flex();
+  column-gap: 30px;
+
+  &__li {
+    font-weight: bold;
+    color: $text;
+  }
+}
+
+// main//
+// -----///-///////-/////------------------
+.main {
+  &__inner {
+    @include inner();
+  }
+}
+// work////
+//--------------//------------
+
+.unit {
+  padding: 100px 0;
+  &__inner {
+    @include inner();
+  }
+  &__title {
+    font-size: 38px;
+    line-height: (49/38);
+  }
+  &__title::before {
+    display: block;
+    content: "制作実績";
+    font-size: 12px;
+    color: $copy;
+    margin-bottom: 20px;
+  }
+  &__title::after {
+    display: block;
+    content: "";
+    width: 120px;
+    height: 1px;
+    background-color: #000000;
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+  &__text {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+  &__list {
+    @include flex();
+  }
+}
+
+.card {
+  width: (350/1170) * 100%;
+  &__title {
+    font-size: 20px;
+    padding: 15px 0 10px;
+  }
+  &__tag {
+    font-size: 12px;
+    color: $copy;
+  }
+}
+.italic {
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+}
+.bg__beaju {
+  background-color: $project-bg;
+}
+.subtitle::before {
+  content: "企画運営";
+}
+// project
+// --/-----------------------------------------------------------
+.project__list {
+  @include flex(center, spase-between);
+  column-gap: 50px;
+}
+
+.project {
+  width: (560/1170) * 100%;
+  &__name {
+    @include name();
+  }
+  &__text {
+    font-size: 20px;
+  }
+}
+// footter///
+//------------------
+.footer {
+  padding: 78px 0 200px 0;
+  text-align: right;
+  color: $copy;
+  &__inner {
+    @include inner();
+  }
+  &__copy {
+    font-weight: bold;
+  }
+}
+
+// company
+// main
+.company {
+  &__w {
+    width: (360/1170) * 100%;
+  }
+  &__flex {
+    @include flex();
+  }
+}
+.unit {
+  &__textbox {
+    width: (700/1170) * 100%;
+  }
+}
+
+.projects {
+  margin-bottom: 60px;
+  &__img {
+    @include projects_img();
+  }
+  &__name {
+    @include name();
+    margin-top: 150px;
+  }
+  &__title {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 40px;
+  }
+
+  &__img2 {
+    @include projects_img(url(../images/bg_project02.jpg));
+  }
+}
+.number {
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.guide {
+  padding: 100px 0;
+  background-color: $project-bg;
+  &__inner {
+    @include inner();
+  }
+  &__list {
+    @include flex();
+    column-gap: 30px;
+  }
+}
+
+.card {
+  &__text {
+    padding-top: 40px;
+  }
+}
