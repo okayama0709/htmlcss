@@ -1,0 +1,166 @@
+@charset "utf-08";
+
+$main: #32353c;
+$ac: #b79b6c;
+
+$breakpoints: (
+  "sm": "screen and (min-width: 400px)",
+  "md": "screen and (min-width: 800px)",
+  "lg": "screen and (min-width: 1000px)",
+  "xl": "screen and (min-width: 1200px)",
+) !default;
+
+/* minixの設定 */
+@mixin mq($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin inner(
+  $mw: 800px,
+  $w: (
+    800/900 * 100%,
+  )
+) {
+  max-width: $mw;
+  width: $w;
+  margin-left: auto;
+  margin-right: auto;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  position: relative;
+  color: $main;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.pc {
+  display: none;
+  @include mq(md) {
+    display: block;
+  }
+}
+.cha {
+  color: $ac;
+}
+.btn {
+  display: block;
+  width: (185/800) * 100%;
+  font-size: (14rem/10);
+  color: #fff;
+  background-color: $main;
+  text-align: center;
+  padding: (21em/14) 0;
+}
+
+.header {
+  &__bar {
+    position: fixed;
+    width: 100%;
+    padding: (32em/10) 0;
+    background-color: rgba(256, 256, 256, 0.8);
+  }
+}
+
+.menu {
+  &__inner {
+    @include inner();
+    @include flex();
+
+    @include mq(md) {
+      @include inner(1200px, (1200/ (1200+720)) * 100%);
+    }
+  }
+  &__list {
+    display: flex;
+    column-gap: (32em/10);
+  }
+  &__list a {
+    color: $main;
+    font-size: (16rem/10);
+  }
+}
+
+.main {
+  &__inner {
+    @include inner();
+  }
+}
+.colection {
+  margin: (84em/10) 0;
+  &__aw {
+    padding: 0 0 (56em/10) 0;
+  }
+  &__product {
+    @include flex();
+  }
+}
+.aw {
+  &__sub {
+    font-size: (14rem/10);
+    margin-bottom: (28em/14);
+  }
+  &__text {
+    font-size: (32rem/10);
+    margin-bottom: (42em/32);
+  }
+}
+.product {
+  @include flex();
+  &__article {
+    width: (370/800) * 100%;
+    position: relative;
+  }
+  &__imgBox {
+    margin-bottom: (28em/10);
+  }
+  &__imgBox::before {
+    position: absolute;
+    display: block;
+    content: "SALE";
+    background-color: $ac;
+    width: (100/328) * 100%;
+    font-size: (14rem/10);
+    padding: (14em/14);
+    text-align: center;
+    color: #fff;
+    top: (21em/14);
+    left: (21em/14);
+  }
+  &__category {
+    font-size: (14rem/10);
+    margin-bottom: (21em/14);
+  }
+  &__name {
+    font-size: (21rem/10);
+    margin-bottom: (10em/21);
+  }
+  &__price {
+    font-size: (21rem/10);
+
+    color: $ac;
+  }
+}

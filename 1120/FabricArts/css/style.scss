@@ -16,7 +16,7 @@ $project-bg: #fdf8eb;
   margin-left: auto;
 }
 
-@mixin flex($a: center, $j: spase-between) {
+@mixin flex($a: center, $j: space-between) {
   display: flex;
   flex-wrap: wrap;
   align-items: $a;
@@ -157,10 +157,13 @@ a {
 // --/-----------------------------------------------------------
 .project__list {
   @include flex(center, spase-between);
-  column-gap: 50px;
+  // column-gap: 50px;
 }
 
 .project {
+  &:nth-child(1) {
+    // padding-right: 10%;
+  }
   width: (560/1170) * 100%;
   &__name {
     @include name();
